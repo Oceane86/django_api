@@ -1,0 +1,85 @@
+###
+GET http://127.0.0.1:8000/api/v1/
+
+###
+GET http://127.0.0.1:8000/api/v1/bookmarks/
+
+###
+GET http://127.0.0.1:8000/api/v1/bookmarks/1
+
+###
+POST http://127.0.0.1:8000/api/v1/bookmarks/
+content-type: application/json
+
+{
+    "name": "Pole Emploi",
+    "url": "https://candidat.pole-emploi.fr/",
+    "tags": "",
+    "comment": "",
+    "user": 1
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/bookmarks/
+content-type: application/json
+
+{
+    "name": "Test",
+    "url": "https://test.com/",
+    "tags": "",
+    "comment": "",
+    "user": 1
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/bookmarks/3/
+content-type: application/json
+
+{
+    "name": "LInkedine",
+    "url": "https://linkedin.com/",
+    "tags": "linke, din",
+    "comment": "cccc",
+    "user": 1
+}
+
+###
+PATCH http://127.0.0.1:8000/api/v1/bookmarks/3/
+content-type: application/json
+
+{
+    "name": "Linkedin"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/bookmarks/3/
+
+
+
+###
+GET http://127.0.0.1:8000/api/v1/bookmarks/
+
+###
+GET http://127.0.0.1:8000/api/v1/bookmarks/
+
+
+
+### Récupération du token
+
+POST http://127.0.0.1:8000/api/auth/token/login/
+Content-Type: application/json
+
+
+{
+    "username" : "oce",
+    "password" : "a12345678a"
+}
+
+###
+GET http://127.0.0.1:8000/api/v1/bookmarks/
+Authorization: Token 9dad701f04a7f2059b5003086c3718b733a0b5ab
+
+###
+POST http://127.0.0.1:8000/api/auth/token/logout
+Authorization: Token 9dad701f04a7f2059b5003086c3718b733a0b5ab
+
